@@ -1,0 +1,14 @@
+{
+  "name": "secureproject",
+  "version": "1.0.0",
+  "description": "secure app dev othello project",
+  "main": "service.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jason Carmichael",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}

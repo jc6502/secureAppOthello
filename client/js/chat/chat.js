@@ -1,3 +1,4 @@
+//sends a chat message to the specified room
 function sendChatMessage()
 {
   //get message, username and roomid
@@ -39,6 +40,8 @@ function sendChatMessage()
 }
 
 
+//gets the last chat message from the db for the given room,
+//if the room is empty it will create a new one
 function getChatMessage()
 {
   //get username and roomid

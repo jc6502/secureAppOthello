@@ -95,14 +95,3 @@ exports.updateLastSeen = function(conn, time, user) {
     return true;
   });
 }//end updateLastSeen
-
-
-exports.getActiveUsers = function(conn, req, res) {
-
-}//end getActiveUsers
-
-
-//local methods
-function testLocal(){
-  return 'local test';
-}

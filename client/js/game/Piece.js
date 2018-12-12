@@ -56,7 +56,7 @@ Piece.prototype = {
     return this.piece;
   },//end create
 
-  //change state
+  //change state on this.type after the client gets the game state
   updateState:function()
   {
     if(this.type === 1)

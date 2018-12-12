@@ -8,6 +8,7 @@ const BOARDHEIGHT = 8;
 
 //exposed methods
 
+//for a given user, creates a new game and sets the challenge
 exports.sendChallenge = function(conn, req, res) {
   //sanitize user input
   var username = req.sanitize(req.body.data.user);

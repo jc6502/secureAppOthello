@@ -12,6 +12,12 @@ exports.receiveChatMessage = function(conn, req, res) {
   var time = new Date().toISOString().slice(0, 19).replace('T', ' '); //time in ISO DATETIME format for sql
 
   //check if chat message or username is over length
+  if(message.length > 254)
+  {
+    res.set('Content-Type', 'application/json');
+    res.send(JSON.stringify({errormessage:'chat message too long'}));
+    res.end();
+  }
 
   //checks chat room is already created
   //mysql package sanitizes input for prepared statements

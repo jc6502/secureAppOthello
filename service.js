@@ -92,7 +92,7 @@ app.post('/ajax', bodyParser.json(), function (req, res) {
   //console.log(JSON.stringify(req.body));
   //console.log('sanitized input: '+service+' | '+method);
 
-  //call target service and method
+  //call targeted service and method
   if(service === 'user')
   {
     switch (method) {

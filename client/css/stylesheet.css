@@ -1,0 +1,75 @@
+/*General*/
+:root {
+    --main-bg-color: #eae2de;
+}
+
+body {
+  background-color: var(main-bg-color);
+  background-color: #eae2de;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+
+.block {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+
+.centered {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.textcenter {
+  text-align: center;
+}
+
+/*Login*/
+#userLogin {
+  width:40%;
+  margin-top: 100px;
+  padding: 20px;
+  border: 2px solid #555;
+  border-radius: 10px;
+}
+
+input {
+  border-radius: 5px;
+  width: 100px;
+  margin-top: 10px;
+}
+
+button {
+  border-radius: 5px;
+  min-width: 50px;
+  margin-top: 10px;
+  display: block;
+}
+
+
+/*Game*/
+#gamesvg {
+  display:block;
+}
+
+/*Chat*/
+#chatSection {
+  width:40%
+}
+
+#chatInput {
+  display: block;
+  min-width: 200px;
+}
+
+li {
+  list-style-type: none;
+  text-align: center;
+  padding: 5px;
+  border-radius: 5px;
+  margin: 0px 10px;
+  background-color: #fff;
+}

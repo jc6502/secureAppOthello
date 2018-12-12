@@ -1,0 +1,83 @@
+<html>
+
+<head>
+  <link type="text/css" rel="stylesheet" href="css/stylesheet.css"/>
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+  <script src="js/user/clientLogin.js"></script>
+  <script src="js/user/userFunctions.js"></script>
+  <script src="js/chat/chat.js"></script>
+  <script src="js/game/gameFunctions.js"></script>
+  <script src="js/game/board.js"></script>
+  <script src="js/game/Piece.js"></script>
+  <script src="js/misc/misc.js"></script>
+  <script src="js/misc/clientConstants.js"></script>
+</head>
+
+
+<body>
+
+  <!--Login Section-->
+  <div id="userLogin" class="centered">
+    <p id="loginErrorMessage" style="display:none">errror message</p>
+
+    <div id="loginSection">
+      <h3 class="textcenter">Login</h3>
+      <input class="block centered" type="text" id="loginUserName" placeholder="username">
+      <input class="block centered" type="text" id="loginUserPass" placeholder="password">
+      <button class="block centered" type="button" id="loginSendLoginButton" onclick="sendLogin()">Login</button>
+      <button class="block centered" type="button" id="loginSwitchToNewUserButton">New User</button>
+    </div>
+
+    <div id="newUserSection" class="hidden">
+      <h3 class="textcenter">New User</h3>
+      <input class="block centered" type="text" id="newUserName" placeholder="username">
+      <input class="block centered" type="text" id="newUserPass" placeholder="password">
+      <button class="block centered" type="button" id="newUserSendLoginButton" onclick="sendNewUser()">Create Account</button>
+      <button class="block centered" type="button" id="newUserSwitchToLoginButton">Existing User</button>
+    </div>
+  </div>
+
+
+  <!--Lobby game and chat sections-->
+  <div id="root" class="hidden centered">
+    <p id="statusMessage" class="textcenter"></p>
+
+
+    <!--Lobby, contains online users-->
+    <div id="lobbySection">
+      <div id="challengePrompt"></div>
+      <ul id="onlineUsers">
+      </ul>
+    </div>
+
+    <!--Game Section-->
+    <div id="gameSection" class="centered">
+      <h3 id="gameTitle" class="textcenter">Othello</h3>
+      <p id="errorMessage" class="textcenter"></p>
+      <p id="turnPlayer" class="textcenter"></p>
+      <svg id="gamesvg" width="500" height="500" class="centered"></svg>
+    </div>
+
+
+    <!--Chat Section-->
+    <div id="chatSection" class="centered">
+      <h3 id="chatTitle" class="textcenter">Chat</h3>
+      <ul id="chatRoom" class="centered"></ul>
+      <input id="chatInput" class="centered"/>
+      <button onclick="sendChatMessage()" class="centered">Send Message</button>
+    </div>
+
+    <!--debug-->
+    <div style="display:none;">
+    <p id="userid"></p>
+    <p id="roomid"></p>
+    <p id="turnPlayer"></p>
+    </div>
+
+  </div>
+
+</body>
+
+</html>
